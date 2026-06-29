@@ -1,0 +1,48 @@
+:root {
+  /* Main Colors (White Background / Purple Accents) */
+  --bg-primary: #ffffff;          /* Pure white for the main background */
+  --bg-secondary: #f7f4fa;        /* Soft white with a hint of purple/grey for cards or sections */
+  
+  --text-primary: #1a0933;        /* Deep dark purple for main text (high contrast) */
+  --text-secondary: #6b5b82;      /* Subtle muted purple for secondary text or descriptions */
+
+  /* Purple Shades for Buttons, Links, and Highlights */
+  --purple-primary: #6366f1;      /* Modern vibrant purple (Primary accent color) */
+  --purple-hover: #4f46e5;        /* Slightly darker purple for hover states */
+  --purple-light: #eef2ff;        /* Extremely light purple for alert backgrounds or secondary buttons */
+  
+  /* Borders and Shadows */
+  --border-color: #e2dbe9;        /* Subtle divider lines that blend with the purple theme */
+  --radius-md: 8px;               /* Standard border radius for rounded corners */
+  --shadow-sm: 0 2px 8px rgba(99, 102, 241, 0.05); /* Soft shadow with a slight purple tint */
+}
+
+/* Base Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--purple-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--purple-hover);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
