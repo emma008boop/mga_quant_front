@@ -1,2 +1,2 @@
 # mga_quant_front
-Este es un repositorio que pretende simular plaformas de entidades como Motus de la FMCSA para hacer un web scraping extrayendo informacion del lead y generar una cotizacion.
+This is a repository designed to simulate platforms from organizations such as the FMCSA's Motus, in order to perform web scraping to extract information from the lead and generate a quote.
