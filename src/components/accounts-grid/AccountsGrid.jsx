@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import LeadCard from '../../components/lead-card/LeadCard';
-import './accounts.css';
+import LeadCard from '../lead-card/LeadCard.jsx';
+import './accounts-grid.css';
 
-function Accounts({ externalSearchTerm }) {
+function AccountsGrid({ externalSearchTerm }) {
   const [accounts, setAccounts] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -28,23 +28,11 @@ function Accounts({ externalSearchTerm }) {
   }, [externalSearchTerm]);
 
   const handleLeadClick = (dotNumber) => {
-    console.log(`Navegando a la cuenta completa del DOT: ${dotNumber}`);
-    
+    console.log(`Navegando a los detalles del DOT: ${dotNumber}`);
   };
 
   return (
-    <div className="accounts-container">
-      <header className="accounts-header">
-        <div>
-          <h1>DOT Business Accounts</h1>
-          {externalSearchTerm ? (
-            <p className="subtitle">Showing results for: <strong>{externalSearchTerm}</strong></p>
-          ) : (
-            <p className="subtitle">Real-time SQLite backend dashboard analytics.</p>
-          )}
-        </div>
-      </header>
-
+    <div className="grid-section-wrapper">
       {loading ? (
         <div className="loading-state">Loading records from SQLite database...</div>
       ) : accounts.length > 0 ? (
@@ -64,4 +52,4 @@ function Accounts({ externalSearchTerm }) {
   );
 }
 
-export default Accounts;
+export default AccountsGrid;

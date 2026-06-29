@@ -24,11 +24,6 @@ function Navbar({ onSearch }) {
           className="navbar-search-input"
         />
       </form>
-
-      <ul className="navbar-links">
-        <li>Dashboard</li>
-        <li>Accounts</li>
-      </ul>
     </nav>
   );
 }

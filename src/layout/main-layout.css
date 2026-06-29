@@ -8,6 +8,6 @@
 }
 
 .layout-content {
-  flex: 1; /* Pushes the footer down if the content is short */
+  flex: 1;
   width: 100%;
 }

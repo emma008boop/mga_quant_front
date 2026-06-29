@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import MainLayout from './layout/MainLayout.jsx';
-import Accounts from './screens/accounts/Accounts.jsx';
+import Home from './screens/home/Home.jsx';
 
 function App() {
-  {/*We save the user's text*/}
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleGlobalSearch = (term) => {
@@ -12,7 +11,7 @@ function App() {
 
   return (
     <MainLayout onSearchSubmit={handleGlobalSearch}>
-      <Accounts externalSearchTerm={searchTerm} />
+      <Home externalSearchTerm={searchTerm} />
     </MainLayout>
   );
 }
