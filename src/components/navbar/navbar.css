@@ -1,0 +1,92 @@
+/* src/components/Navbar/Navbar.css */
+
+.navbar {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between; /* Keeps logo on the left, search on the right */
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  user-select: none;
+}
+
+.navbar-logo span {
+  color: var(--purple-primary);
+}
+
+/* Search Bar Wrapper */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 320px; /* Modern compact width for US style searchbars */
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 10px 45px 10px 16px; /* Extra right padding so text doesn't overlap the icon */
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+/* Subtle focus state using your global variables */
+.navbar-search input:focus {
+  outline: none;
+  border-color: var(--purple-primary);
+  background-color: var(--bg-primary);
+  box-shadow: 0 0 0 3px var(--purple-light);
+}
+
+/* Icon Button Styling */
+.search-icon-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: var(--text-secondary);
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.search-icon-btn:hover {
+  color: var(--purple-primary);
+  transform: scale(1.05);
+}
+
+.search-icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* SVG Icon sizing */
+.loupe-icon {
+  width: 18px;
+  height: 18px;
+}
