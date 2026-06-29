@@ -1,12 +1,18 @@
-// src/App.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import MainLayout from './layout/MainLayout.jsx';
-import Home from './screens/home/Home.jsx';
+import Accounts from './screens/accounts/Accounts.jsx';
 
 function App() {
+  {/*We save the user's text*/}
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleGlobalSearch = (term) => {
+    setSearchTerm(term);
+  };
+
   return (
-    <MainLayout>
-      <Home />
+    <MainLayout onSearchSubmit={handleGlobalSearch}>
+      <Accounts externalSearchTerm={searchTerm} />
     </MainLayout>
   );
 }
